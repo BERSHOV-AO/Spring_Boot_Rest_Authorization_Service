@@ -1,0 +1,9 @@
+
+GET http://localhost:8080/hello?name=Oleg&age=34
+Content-Type: application/json
+###
+GET localhost:8080/authorize
+Content-Type: application/json
+###
+GET localhost:8080/
+Content-Type: application/json
