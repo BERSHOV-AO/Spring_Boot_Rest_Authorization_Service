@@ -1,4 +1,4 @@
-package ru.netology.authorizationservice.service;
+package ru.netology.authorizationservice.exception;
 
 public class InvalidCredentials extends RuntimeException {
     public InvalidCredentials(String msg) {
