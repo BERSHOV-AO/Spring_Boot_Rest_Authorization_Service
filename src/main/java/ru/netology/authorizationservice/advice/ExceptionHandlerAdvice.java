@@ -13,14 +13,15 @@ public class ExceptionHandlerAdvice {
     @ExceptionHandler(InvalidCredentials.class)
     public ResponseEntity<String> invalidCredentialsHandler(InvalidCredentials e) {
         // body + статус(HttpStatus.BAD_REQUEST) 400
-        return new ResponseEntity<>(e.getMessage() + "  InvalidCredentials throwException method",
+        return new ResponseEntity<>(e.getMessage() + " *** InvalidCredentials throwException method ***",
                 HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(UnauthorizedUser.class)
     public ResponseEntity<String> unauthorizedUserHandler(UnauthorizedUser e) {
         // body + статус(HttpStatus.UNAUTHORIZED) 401
-        return new ResponseEntity<>(e.getMessage() + "  UnauthorizedUser throwException method",
+        System.out.println(e.toString());
+        return new ResponseEntity<>(e.getMessage() + " *** UnauthorizedUser throwException method ***",
                 HttpStatus.UNAUTHORIZED);
     }
 }
