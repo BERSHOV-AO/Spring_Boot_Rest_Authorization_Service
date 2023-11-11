@@ -9,7 +9,7 @@ public class User {
 
     @NotBlank
     @Size(min = 2, max = 20)
-    private String user;
+   private String user;
 
     @Size(min = 0, max = 10)
     private String password;
